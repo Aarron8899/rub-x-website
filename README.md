@@ -1,2 +1,2 @@
-# rub-x-website
-Website for Rub-X automatic rubber harvesting system
+# Rub-X Website
+This repository hosts the main website for Rub-X at www.rub-x.org.
