@@ -1,2 +1,2 @@
 # Rub-X Website
-This repository hosts the main website for Rub-X at www.rub-x.org.
+This is the official website for Rub-X hosted on GitHub Pages.
