@@ -1,2 +1,3 @@
-# Rub-X Website
-This is the official website for Rub-X hosted on GitHub Pages.
+# Rub-X Homepage
+
+This is the official homepage for Rub-X, an affordable, scalable automation solution for rubber harvesting.
