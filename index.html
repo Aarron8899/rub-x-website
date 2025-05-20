@@ -12,25 +12,30 @@
       padding: 0;
       background: #000;
       color: #fff;
+      line-height: 1.6;
     }
 
     header {
-      background: #1a1a1a;
-      padding: 0;
+      background: #111;
+      padding: 20px 0;
       text-align: center;
     }
 
     nav {
-      background: #343a40;
+      background: #222;
       padding: 10px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
       color: #fff;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1rem;
     }
 
     nav a:hover {
@@ -38,14 +43,15 @@
     }
 
     section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 60px 20px;
+      max-width: 960px;
       margin: auto;
     }
 
     h2 {
-      color: #fff;
-      font-size: 1.8rem;
+      color: #ffc107;
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
 
     ul {
@@ -58,22 +64,23 @@
 
     .cta {
       background: #ffc107;
-      padding: 20px;
-      border-radius: 8px;
+      padding: 30px;
+      border-radius: 10px;
       text-align: center;
       margin: 40px auto;
-      max-width: 600px;
+      max-width: 700px;
       color: #000;
     }
 
     .cta a {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #1a1a1a;
+      margin-top: 15px;
+      padding: 12px 24px;
+      background: #000;
       color: #fff;
       text-decoration: none;
-      border-radius: 4px;
+      border-radius: 5px;
+      font-weight: bold;
     }
 
     .cta a:hover {
@@ -81,20 +88,19 @@
     }
 
     footer {
-      background: #e9ecef;
+      background: #111;
       padding: 20px;
       text-align: center;
       font-size: 0.9rem;
-      color: #000;
+      color: #bbb;
     }
 
-    /* === Banner Animation === */
     .banner-container {
       position: relative;
       width: 100%;
       height: 400px;
       overflow: hidden;
-      background: black;
+      background: #000;
     }
 
     .banner-container::before,
@@ -140,29 +146,25 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: bold;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
       z-index: 1;
       text-align: center;
     }
 
-    .external-link {
-      display: inline-block;
-      margin-top: 15px;
-      color: #06f;
-      font-weight: bold;
+    a {
+      color: #ffc107;
     }
 
-    .external-link:hover {
-      text-decoration: underline;
+    a:hover {
+      color: #ffca2c;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <div class="logo-container" style="text-align: center;">
+    <div class="logo-container">
       <video autoplay loop muted playsinline style="width: 100%; max-width: 420px; border-radius: 12px;">
         <source src="rubx_logo_animation.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -170,7 +172,6 @@
     </div>
   </header>
 
-  <!-- Banner with text overlay -->
   <div class="banner-container">
     <div class="banner-text">Revolutionizing Rubber Harvesting</div>
   </div>
@@ -185,8 +186,7 @@
   <section id="mission">
     <h2>Our Mission</h2>
     <p>
-      Rub-X is an innovative solution designed to automate rubber harvesting in hilly plantation regions.
-      By leveraging a low-cost, reliable cable-driven system, we break through long-standing bottlenecks of power and control distribution across thousands of trees.
+      Rub-X is an innovative solution designed to automate rubber harvesting in hilly plantation regions. By leveraging a low-cost, reliable cable-driven system, we break through long-standing bottlenecks of power and control distribution across thousands of trees.
     </p>
   </section>
 
@@ -207,9 +207,7 @@
     </p>
     <div class="cta">
       <p><strong>Rub-X is featured on WIPO GREEN.</strong></p>
-      <a href="https://wipogreen.wipo.int/wipogreen-database/articles/162114" target="_blank" rel="noopener noreferrer">
-        View on WIPO GREEN
-      </a>
+      <a href="https://wipogreen.wipo.int/wipogreen-database/articles/162114" target="_blank" rel="noopener noreferrer">View on WIPO GREEN</a>
     </div>
 
     <div class="cta">
@@ -227,6 +225,5 @@
   <footer>
     &copy; 2025 Rub-X™. All rights reserved. | Trademark Registered | contact@rub-x.org
   </footer>
-
 </body>
 </html>
