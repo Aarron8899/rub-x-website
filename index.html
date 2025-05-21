@@ -22,9 +22,12 @@
     }
 
     .logo-container img {
-      max-width: 320px;
       width: 100%;
+      max-width: 500px;
+      height: auto;
       border-radius: 12px;
+      margin: 20px auto;
+      display: block;
     }
 
     nav {
@@ -48,23 +51,15 @@
       text-decoration: underline;
     }
 
-    .banner-text-outside {
-      text-align: center;
-      font-size: 2.2rem;
-      font-weight: bold;
-      padding: 2rem 1rem;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-    }
-
     section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       max-width: 960px;
       margin: auto;
     }
 
     h2 {
       color: #ffc107;
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin-bottom: 20px;
     }
 
@@ -78,10 +73,10 @@
 
     .cta {
       background: #ffc107;
-      padding: 25px;
+      padding: 30px;
       border-radius: 10px;
       text-align: center;
-      margin: 30px auto;
+      margin: 40px auto;
       max-width: 700px;
       color: #000;
     }
@@ -109,6 +104,26 @@
       color: #bbb;
     }
 
+    .banner-text-outside {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      padding: 2rem 1rem;
+      color: #ffc107;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    @media (max-width: 768px) {
+      .banner-text-outside {
+        font-size: 1.8rem;
+        padding: 1.5rem 1rem;
+      }
+
+      .logo-container img {
+        max-width: 90%;
+      }
+    }
+
     a {
       color: #ffc107;
     }
@@ -116,19 +131,12 @@
     a:hover {
       color: #ffca2c;
     }
-
-    @media (max-width: 768px) {
-      .banner-text-outside {
-        font-size: 1.6rem;
-        padding: 1.5rem 1rem;
-      }
-    }
   </style>
 </head>
 <body>
   <header>
     <div class="logo-container">
-      <img src="rubx-logo.png" alt="Rub-X Logo">
+      <img src="rubx-logo.png" alt="Rub-X Logo" />
     </div>
   </header>
 
