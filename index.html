@@ -17,16 +17,36 @@
 
     header {
       background: #111;
-      padding: 0;
       text-align: center;
+      padding: 0;
     }
 
-    .logo-container img {
+    header video {
       width: 100%;
       max-width: 500px;
       height: auto;
       margin: 20px auto;
       display: block;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255, 193, 7, 0.4);
+    }
+
+    .banner-area {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .banner-text-outside {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      padding: 1rem;
+      color: #ffc107;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+      flex: 1 1 300px;
     }
 
     nav {
@@ -103,64 +123,6 @@
       color: #bbb;
     }
 
-    .banner-area {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .banner-text-outside {
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: bold;
-      padding: 1rem;
-      color: #ffc107;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-      flex: 1 1 300px;
-    }
-
-    .banner-video {
-      flex: 1 1 300px;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .banner-video video {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(255, 193, 7, 0.4);
-      transition: transform 0.5s ease;
-    }
-
-    .banner-video video:hover {
-      transform: scale(1.03);
-    }
-
-    .play-button {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .play-button button {
-      padding: 10px 20px;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #ffc107, #ff9800);
-      color: #000;
-      cursor: pointer;
-      font-size: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: background 0.3s ease, transform 0.2s;
-    }
-
-    .play-button button:hover {
-      background: linear-gradient(135deg, #ffd54f, #ffb74d);
-      transform: translateY(-2px);
-    }
-
     .patents-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -218,7 +180,7 @@
         padding: 1.5rem 1rem;
       }
 
-      .logo-container img {
+      header video {
         max-width: 90%;
       }
     }
@@ -234,19 +196,11 @@
 </head>
 <body>
   <header>
-    <div class="logo-container">
-      <img src="rubx-logo.png" alt="Rub-X Logo" />
-    </div>
+    <video src="rubx-logo.mp4" autoplay muted loop playsinline></video>
   </header>
 
   <div class="banner-area">
     <div class="banner-text-outside">Revolutionizing Rubber Harvesting</div>
-    <div class="banner-video">
-      <video id="logoVideo" src="rubx-logo.mp4" autoplay muted loop playsinline></video>
-      <div class="play-button">
-        <button onclick="toggleMute()">Toggle Sound</button>
-      </div>
-    </div>
   </div>
 
   <nav>
@@ -318,11 +272,6 @@
   </footer>
 
   <script>
-    function toggleMute() {
-      const video = document.getElementById('logoVideo');
-      video.muted = !video.muted;
-    }
-
     function showLightbox(src) {
       document.getElementById('lightbox-img').src = src;
       document.getElementById('lightbox').style.display = 'flex';
@@ -334,3 +283,4 @@
   </script>
 </body>
 </html>
+
