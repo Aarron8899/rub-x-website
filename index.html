@@ -49,16 +49,12 @@
       align-items: center;
       justify-content: center;
       opacity: 0;
-      transition: opacity 1s ease, background-color 0.3s;
+      transition: opacity 0.4s ease, background-color 0.3s;
       z-index: 5;
     }
 
     .video-play-button:hover {
       background-color: rgba(255, 193, 7, 0.45);
-    }
-
-    .video-play-button.show {
-      opacity: 1;
     }
 
     .volume-slider {
@@ -67,11 +63,12 @@
       left: 12px;
       width: 100px;
       opacity: 0;
-      transition: opacity 0.5s;
+      transition: opacity 0.4s ease;
       z-index: 5;
     }
 
-    .volume-slider.show {
+    .video-container:hover .video-play-button,
+    .video-container:hover .volume-slider {
       opacity: 1;
     }
 
@@ -146,7 +143,7 @@
       font-size: 2.5rem;
       font-weight: bold;
       padding: 0.5rem 0.5rem;
-      color:#00c292;
+      color: #00c292;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
     }
 
@@ -214,9 +211,9 @@
 <body>
 
   <header>
-    <div class="video-container">
+    <div class="video-container" id="videoContainer">
       <video id="logoVideo" src="rubx-logo.mp4" autoplay muted loop playsinline></video>
-      <button class="video-play-button" id="playBtn" title="Toggle Mute">🔊</button>
+      <button class="video-play-button" id="playBtn" title="Toggle Mute">🔇</button>
       <input type="range" id="volumeControl" class="volume-slider" min="0" max="1" step="0.01" value="0.5">
     </div>
   </header>
@@ -290,26 +287,21 @@
   </footer>
 
   <script>
-    window.addEventListener('load', () => {
-      document.getElementById('playBtn').classList.add('show');
-    });
+    const video = document.getElementById('logoVideo');
+    const playBtn = document.getElementById('playBtn');
+    const volumeSlider = document.getElementById('volumeControl');
 
-    document.getElementById('playBtn').addEventListener('click', () => {
-      const video = document.getElementById('logoVideo');
-      const slider = document.getElementById('volumeControl');
-
-      if (video.muted) {
-        video.muted = false;
-        video.volume = slider.value;
-        slider.classList.add('show');
+    playBtn.addEventListener('click', () => {
+      video.muted = !video.muted;
+      if (!video.muted) {
+        video.volume = volumeSlider.value;
+        playBtn.textContent = '🔊';
       } else {
-        video.muted = true;
-        slider.classList.remove('show');
+        playBtn.textContent = '🔇';
       }
     });
 
-    document.getElementById('volumeControl').addEventListener('input', function () {
-      const video = document.getElementById('logoVideo');
+    volumeSlider.addEventListener('input', function () {
       video.volume = this.value;
     });
   </script>
