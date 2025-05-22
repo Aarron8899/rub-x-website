@@ -17,21 +17,21 @@
 
     header {
       background: #111;
+      padding: 0;
       text-align: center;
-      padding: 20px;
     }
 
-    .logo-video {
-      max-width: 500px;
+    .logo-container video {
       width: 100%;
+      max-width: 500px;
       height: auto;
+      margin: 20px auto;
+      display: block;
       border: none;
-      border-radius: 16px;
-      box-shadow: 0 0 12px rgba(255, 193, 7, 0.3);
     }
 
     .play-button {
-      margin-top: 12px;
+      margin-top: 10px;
       padding: 10px 20px;
       font-size: 1rem;
       font-weight: bold;
@@ -154,7 +154,7 @@
         padding: 1.5rem 1rem;
       }
 
-      .logo-video {
+      .logo-container video {
         max-width: 90%;
       }
     }
@@ -171,8 +171,10 @@
 <body>
 
   <header>
-    <video id="logoVideo" class="logo-video" src="rubx-logo.mp4" autoplay muted loop playsinline></video>
-    <button class="play-button" onclick="playVideo()">🔊 Play with Sound</button>
+    <div class="logo-container">
+      <video id="logoVideo" src="rubx-logo.mp4" autoplay muted loop playsinline></video>
+      <button class="play-button" onclick="playVideo()">🔊 Play with Sound</button>
+    </div>
   </header>
 
   <div class="banner-text-outside">Revolutionizing Rubber Harvesting</div>
