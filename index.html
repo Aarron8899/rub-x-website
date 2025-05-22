@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="MgtATK_VWF6BzGQcfGylAaxOKwr6pOwAtTz_iZ4wlQU">
   <title>Rub-X | Automated Rubber Harvesting</title>
   <style>
     body {
@@ -20,59 +21,50 @@
       text-align: center;
     }
 
-    .video-container {
+    .logo-container {
       position: relative;
-      max-width: 500px;
-      margin: 0 auto;
+      display: inline-block;
+      text-align: center;
+      width: 100%;
     }
 
-    .video-container video {
+    .logo-container video {
       width: 100%;
+      max-width: 500px;
       height: auto;
+      margin: 20px auto;
       display: block;
       border: none;
     }
 
-    .video-play-button {
+    .icon-button {
       position: absolute;
-      bottom: 12px;
-      right: 12px;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
+      bottom: 15px;
+      right: 15px;
+      font-size: 1.4rem;
+      background-color: rgba(255, 193, 7, 0.7);
       border: none;
-      background-color: rgba(255, 193, 7, 0.25);
-      font-size: 16px;
-      color: #000;
+      border-radius: 50%;
+      width: 42px;
+      height: 42px;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 1s ease, background-color 0.3s;
+      transition: opacity 0.6s ease;
       z-index: 5;
-    }
-
-    .video-play-button:hover {
-      background-color: rgba(255, 193, 7, 0.45);
-    }
-
-    .video-play-button.show {
       opacity: 1;
     }
 
-    .volume-slider {
-      position: absolute;
-      bottom: 12px;
-      left: 12px;
-      width: 100px;
+    .icon-button.hidden {
       opacity: 0;
-      transition: opacity 0.5s;
-      z-index: 5;
+      pointer-events: none;
     }
 
-    .volume-slider.show {
-      opacity: 1;
+    .banner-text-outside {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      padding: 0.5rem 0.5rem;
+      color:#00c292;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
     }
 
     nav {
@@ -141,26 +133,17 @@
       background: #333;
     }
 
-    .banner-text-outside {
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: bold;
-      padding: 0.5rem 0.5rem;
-      color:#00c292;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-    }
-
     .patent-gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
+      gap: 16px;
       margin-top: 20px;
     }
 
     .patent-gallery img {
-      max-width: 130px;
-      border-radius: 6px;
+      max-width: 160px;
+      border-radius: 8px;
       cursor: pointer;
       transition: transform 0.2s ease;
     }
@@ -183,22 +166,8 @@
         padding: 1.5rem 1rem;
       }
 
-      .video-play-button {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
-        bottom: 8px;
-        right: 8px;
-      }
-
-      .volume-slider {
-        width: 80px;
-        bottom: 8px;
-        left: 8px;
-      }
-
-      .patent-gallery img {
-        max-width: 100px;
+      .logo-container video {
+        max-width: 90%;
       }
     }
 
@@ -214,10 +183,9 @@
 <body>
 
   <header>
-    <div class="video-container">
+    <div class="logo-container" id="logoContainer">
       <video id="logoVideo" src="rubx-logo.mp4" autoplay muted loop playsinline></video>
-      <button class="video-play-button" id="playBtn" onclick="playVideo()">🔊</button>
-      <input type="range" id="volumeControl" class="volume-slider" min="0" max="1" step="0.01" value="0">
+      <button id="playBtn" class="icon-button" onclick="playWithSound()" title="Play with Sound">🔊</button>
     </div>
   </header>
 
@@ -255,7 +223,7 @@
     </p>
     <div class="cta">
       <p><strong>Rub-X is featured on WIPO GREEN.</strong></p>
-      <a href="https://wipogreen.wipo.int/wipogreen-database/articles/162114" target="_blank">View on WIPO GREEN</a>
+      <a href="https://wipogreen.wipo.int/wipogreen-database/articles/162114" target="_blank" rel="noopener noreferrer">View on WIPO GREEN</a>
     </div>
 
     <div class="cta">
@@ -290,31 +258,28 @@
   </footer>
 
   <script>
-    window.addEventListener('load', () => {
-      document.getElementById('playBtn').classList.add('show');
-    });
+    const video = document.getElementById('logoVideo');
+    const button = document.getElementById('playBtn');
+    const container = document.getElementById('logoContainer');
 
-    function playVideo() {
-      const video = document.getElementById('logoVideo');
-      const btn = document.getElementById('playBtn');
-      const slider = document.getElementById('volumeControl');
-
+    function playWithSound() {
       video.muted = false;
-      video.volume = slider.value;
+      video.volume = 1;
       video.play();
-
-      btn.classList.remove('show');
-      slider.classList.add('show');
+      button.classList.add('hidden');
     }
 
-    document.getElementById('volumeControl').addEventListener('input', function () {
-      const video = document.getElementById('logoVideo');
-      video.volume = this.value;
+    container.addEventListener('mouseenter', () => {
+      button.classList.remove('hidden');
+    });
+
+    container.addEventListener('mouseleave', () => {
+      setTimeout(() => {
+        if (!video.muted) button.classList.add('hidden');
+      }, 1500);
     });
   </script>
 
 </body>
 </html>
-
-
 
