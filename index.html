@@ -21,50 +21,40 @@
       text-align: center;
     }
 
-    .logo-container {
+    .video-container {
       position: relative;
-      display: inline-block;
-      text-align: center;
-      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
     }
 
-    .logo-container video {
+    .video-container video {
       width: 100%;
-      max-width: 500px;
       height: auto;
-      margin: 20px auto;
       display: block;
       border: none;
     }
 
-    .icon-button {
+    .video-play-button {
       position: absolute;
-      bottom: 15px;
-      right: 15px;
-      font-size: 1.4rem;
-      background-color: rgba(255, 193, 7, 0.7);
-      border: none;
+      bottom: 10px;
+      right: 10px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      width: 42px;
-      height: 42px;
+      border: none;
+      background-color: rgba(255, 193, 7, 0.25);
+      font-size: 16px;
+      color: #000;
       cursor: pointer;
-      transition: opacity 0.6s ease;
       z-index: 5;
-      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
     }
 
-    .icon-button.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .banner-text-outside {
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: bold;
-      padding: 0.5rem 0.5rem;
-      color:#00c292;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    .video-play-button:hover {
+      background-color: rgba(255, 193, 7, 0.45);
     }
 
     nav {
@@ -133,17 +123,26 @@
       background: #333;
     }
 
+    .banner-text-outside {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      padding: 0.5rem 0.5rem;
+      color:#00c292;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
     .patent-gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 16px;
+      gap: 12px;
       margin-top: 20px;
     }
 
     .patent-gallery img {
-      max-width: 160px;
-      border-radius: 8px;
+      max-width: 130px;
+      border-radius: 6px;
       cursor: pointer;
       transition: transform 0.2s ease;
     }
@@ -166,8 +165,16 @@
         padding: 1.5rem 1rem;
       }
 
-      .logo-container video {
-        max-width: 90%;
+      .video-play-button {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+        bottom: 8px;
+        right: 8px;
+      }
+
+      .patent-gallery img {
+        max-width: 100px;
       }
     }
 
@@ -183,9 +190,9 @@
 <body>
 
   <header>
-    <div class="logo-container" id="logoContainer">
+    <div class="video-container">
       <video id="logoVideo" src="rubx-logo.mp4" autoplay muted loop playsinline></video>
-      <button id="playBtn" class="icon-button" onclick="playWithSound()" title="Play with Sound">🔊</button>
+      <button class="video-play-button" onclick="playVideo()">🔊</button>
     </div>
   </header>
 
@@ -258,26 +265,13 @@
   </footer>
 
   <script>
-    const video = document.getElementById('logoVideo');
-    const button = document.getElementById('playBtn');
-    const container = document.getElementById('logoContainer');
-
-    function playWithSound() {
+    function playVideo() {
+      const video = document.getElementById('logoVideo');
       video.muted = false;
-      video.volume = 1;
       video.play();
-      button.classList.add('hidden');
+      const btn = document.querySelector('.video-play-button');
+      btn.style.display = 'none';
     }
-
-    container.addEventListener('mouseenter', () => {
-      button.classList.remove('hidden');
-    });
-
-    container.addEventListener('mouseleave', () => {
-      setTimeout(() => {
-        if (!video.muted) button.classList.add('hidden');
-      }, 1500);
-    });
   </script>
 
 </body>
