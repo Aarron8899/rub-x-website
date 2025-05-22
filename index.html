@@ -1,9 +1,8 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="MgtATK_VWF6BzGQcfGylAaxOKwr6pOwAtTz_iZ4wlQU">
   <title>Rub-X | Automated Rubber Harvesting</title>
   <style>
     body {
@@ -36,21 +35,44 @@
 
     .video-play-button {
       position: absolute;
-      bottom: 15px;
-      right: 15px;
-      background-color: rgba(255, 193, 7, 0.9);
-      color: #000;
-      padding: 6px 12px;
-      font-size: 14px;
+      bottom: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
       border: none;
-      border-radius: 4px;
+      background-color: rgba(255, 193, 7, 0.25);
+      font-size: 16px;
+      color: #000;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 1s ease, background-color 0.3s;
       z-index: 5;
-      transition: background 0.3s;
     }
 
     .video-play-button:hover {
-      background-color: rgba(255, 193, 7, 1);
+      background-color: rgba(255, 193, 7, 0.45);
+    }
+
+    .video-play-button.show {
+      opacity: 1;
+    }
+
+    .volume-slider {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      width: 100px;
+      opacity: 0;
+      transition: opacity 0.5s;
+      z-index: 5;
+    }
+
+    .volume-slider.show {
+      opacity: 1;
     }
 
     nav {
@@ -162,8 +184,17 @@
       }
 
       .video-play-button {
-        font-size: 12px;
-        padding: 5px 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        bottom: 8px;
+        right: 8px;
+      }
+
+      .volume-slider {
+        width: 80px;
+        bottom: 8px;
+        left: 8px;
       }
 
       .patent-gallery img {
@@ -185,7 +216,8 @@
   <header>
     <div class="video-container">
       <video id="logoVideo" src="rubx-logo.mp4" autoplay muted loop playsinline></video>
-      <button class="video-play-button" onclick="playVideo()">🔊 Play with Sound</button>
+      <button class="video-play-button" id="playBtn" onclick="playVideo()">🔊</button>
+      <input type="range" id="volumeControl" class="volume-slider" min="0" max="1" step="0.01" value="0">
     </div>
   </header>
 
@@ -223,7 +255,7 @@
     </p>
     <div class="cta">
       <p><strong>Rub-X is featured on WIPO GREEN.</strong></p>
-      <a href="https://wipogreen.wipo.int/wipogreen-database/articles/162114" target="_blank" rel="noopener noreferrer">View on WIPO GREEN</a>
+      <a href="https://wipogreen.wipo.int/wipogreen-database/articles/162114" target="_blank">View on WIPO GREEN</a>
     </div>
 
     <div class="cta">
@@ -258,16 +290,31 @@
   </footer>
 
   <script>
+    window.addEventListener('load', () => {
+      document.getElementById('playBtn').classList.add('show');
+    });
+
     function playVideo() {
       const video = document.getElementById('logoVideo');
+      const btn = document.getElementById('playBtn');
+      const slider = document.getElementById('volumeControl');
+
       video.muted = false;
+      video.volume = slider.value;
       video.play();
-      const btn = document.querySelector('.video-play-button');
-      btn.style.display = 'none';
+
+      btn.classList.remove('show');
+      slider.classList.add('show');
     }
+
+    document.getElementById('volumeControl').addEventListener('input', function () {
+      const video = document.getElementById('logoVideo');
+      video.volume = this.value;
+    });
   </script>
 
 </body>
 </html>
+
 
 
