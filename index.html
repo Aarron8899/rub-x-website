@@ -25,7 +25,6 @@
       width: 100%;
       max-width: 500px;
       height: auto;
-      border-radius: 0;
       margin: 20px auto;
       display: block;
     }
@@ -104,16 +103,116 @@
       color: #bbb;
     }
 
+    .banner-area {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
     .banner-text-outside {
       text-align: center;
       font-size: 2.5rem;
       font-weight: bold;
-      padding: 0.5rem 0.5rem;
+      padding: 1rem;
       color: #ffc107;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+      flex: 1 1 300px;
+    }
+
+    .banner-video {
+      flex: 1 1 300px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .banner-video video {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255, 193, 7, 0.4);
+      transition: transform 0.5s ease;
+    }
+
+    .banner-video video:hover {
+      transform: scale(1.03);
+    }
+
+    .play-button {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .play-button button {
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #ffc107, #ff9800);
+      color: #000;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .play-button button:hover {
+      background: linear-gradient(135deg, #ffd54f, #ffb74d);
+      transform: translateY(-2px);
+    }
+
+    .patents-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .patents-grid img {
+      width: 100%;
+      border-radius: 12px;
+      border: 2px solid #333;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255, 193, 7, 0.25);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .patents-grid img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+
+    .lightbox::after {
+      content: "Click anywhere to close";
+      position: absolute;
+      bottom: 30px;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      opacity: 0.7;
     }
 
     @media (max-width: 768px) {
+      .banner-area {
+        flex-direction: column;
+      }
+
       .banner-text-outside {
         font-size: 1.8rem;
         padding: 1.5rem 1rem;
@@ -140,12 +239,21 @@
     </div>
   </header>
 
-  <div class="banner-text-outside">Revolutionizing Rubber Harvesting</div>
+  <div class="banner-area">
+    <div class="banner-text-outside">Revolutionizing Rubber Harvesting</div>
+    <div class="banner-video">
+      <video id="logoVideo" src="rubx-logo.mp4" autoplay muted loop playsinline></video>
+      <div class="play-button">
+        <button onclick="toggleMute()">Toggle Sound</button>
+      </div>
+    </div>
+  </div>
 
   <nav>
     <a href="#mission">Mission</a>
     <a href="#why">Why Rub-X</a>
     <a href="#partners">Partnership</a>
+    <a href="#patents">Patent</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -175,10 +283,27 @@
       <p><strong>Rub-X is featured on WIPO GREEN.</strong></p>
       <a href="https://wipogreen.wipo.int/wipogreen-database/articles/162114" target="_blank" rel="noopener noreferrer">View on WIPO GREEN</a>
     </div>
-
     <div class="cta">
       <p><strong>Join us in transforming rubber production with accessible automation.</strong></p>
       <a href="mailto:contact@rub-x.org">Get in Touch</a>
+    </div>
+  </section>
+
+  <section id="patents">
+    <h2>Patent Certificates</h2>
+    <div class="patents-grid">
+      <img src="patent1.jpg" alt="Patent 1" onclick="showLightbox(this.src)">
+      <img src="patent2.jpg" alt="Patent 2" onclick="showLightbox(this.src)">
+      <img src="patent3.jpg" alt="Patent 3" onclick="showLightbox(this.src)">
+      <img src="patent4.jpg" alt="Patent 4" onclick="showLightbox(this.src)">
+      <img src="patent5.jpg" alt="Patent 5" onclick="showLightbox(this.src)">
+      <img src="patent6.jpg" alt="Patent 6" onclick="showLightbox(this.src)">
+      <img src="patent7.jpg" alt="Patent 7" onclick="showLightbox(this.src)">
+      <img src="patent8.jpg" alt="Patent 8" onclick="showLightbox(this.src)">
+      <img src="patent9.jpg" alt="Patent 9" onclick="showLightbox(this.src)">
+    </div>
+    <div class="lightbox" id="lightbox" onclick="hideLightbox()">
+      <img id="lightbox-img" src="" alt="Enlarged view">
     </div>
   </section>
 
@@ -191,5 +316,21 @@
   <footer>
     &copy; 2025 Rub-X™. All rights reserved. | Trademark Registered | contact@rub-x.org
   </footer>
+
+  <script>
+    function toggleMute() {
+      const video = document.getElementById('logoVideo');
+      video.muted = !video.muted;
+    }
+
+    function showLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function hideLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
