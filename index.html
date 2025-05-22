@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -21,29 +21,36 @@
       text-align: center;
     }
 
-    .logo-container video {
-      width: 100%;
+    .video-container {
+      position: relative;
       max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .video-container video {
+      width: 100%;
       height: auto;
-      margin: 20px auto;
       display: block;
       border: none;
     }
 
-    .play-button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      font-size: 1rem;
-      font-weight: bold;
-      background-color: #ffc107;
-      border: none;
-      border-radius: 6px;
+    .video-play-button {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background-color: rgba(255, 193, 7, 0.9);
       color: #000;
+      padding: 6px 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
       cursor: pointer;
+      z-index: 5;
+      transition: background 0.3s;
     }
 
-    .play-button:hover {
-      background-color: #ffdb4d;
+    .video-play-button:hover {
+      background-color: rgba(255, 193, 7, 1);
     }
 
     nav {
@@ -125,13 +132,13 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 16px;
+      gap: 12px;
       margin-top: 20px;
     }
 
     .patent-gallery img {
-      max-width: 180px;
-      border-radius: 8px;
+      max-width: 130px;
+      border-radius: 6px;
       cursor: pointer;
       transition: transform 0.2s ease;
     }
@@ -154,8 +161,13 @@
         padding: 1.5rem 1rem;
       }
 
-      .logo-container video {
-        max-width: 90%;
+      .video-play-button {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+
+      .patent-gallery img {
+        max-width: 100px;
       }
     }
 
@@ -171,9 +183,9 @@
 <body>
 
   <header>
-    <div class="logo-container">
+    <div class="video-container">
       <video id="logoVideo" src="rubx-logo.mp4" autoplay muted loop playsinline></video>
-      <button class="play-button" onclick="playVideo()">🔊 Play with Sound</button>
+      <button class="video-play-button" onclick="playVideo()">🔊 Play with Sound</button>
     </div>
   </header>
 
@@ -250,9 +262,12 @@
       const video = document.getElementById('logoVideo');
       video.muted = false;
       video.play();
+      const btn = document.querySelector('.video-play-button');
+      btn.style.display = 'none';
     }
   </script>
 
 </body>
 </html>
+
 
