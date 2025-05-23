@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="MgtATK_VWF6BzGQcfGylAaxOKwr6pOwAtTz_iZ4wlQU">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>Rub-X | Automated Rubber Harvesting</title>
   <style>
     body {
@@ -194,7 +195,10 @@
   <header>
     <div class="video-container">
       <video id="logoVideo" src="rubx-logo.mp4" autoplay muted loop playsinline></video>
-      <button class="video-play-button" onclick="playVideo()">🔊</button>
+     <button class="video-play-button" onclick="playVideo()" aria-label="Unmute video">
+  <i class="fas fa-volume-up"></i>
+</button>
+
     </div>
   </header>
 
