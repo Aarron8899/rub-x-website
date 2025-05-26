@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+                                                                                                                                             <!DOCTYPE html>  
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,18 +8,16 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
       margin: 0;
       padding: 0;
-    }
-
-    header, footer, nav, main, section {
-      width: 100%;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
     }
 
     header {
       background: #111;
+      padding: 0;
       text-align: center;
     }
 
@@ -45,13 +43,14 @@
       border-radius: 50%;
       border: none;
       background-color: #000;
-      box-shadow: 0 0 8px rgba(255, 193, 7, 0.8);
       cursor: pointer;
+      z-index: 5;
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 5;
-      transition: all 0.3s ease;
+      box-shadow: 0 0 8px rgba(255, 193, 7, 0.8);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      padding: 0;
     }
 
     .video-play-button:hover {
@@ -59,19 +58,15 @@
       box-shadow: 0 0 12px rgba(255, 193, 7, 1);
     }
 
-    .icon-speaker {
+    .video-play-button .icon-speaker {
       width: 60%;
       height: 60%;
       fill: #ffc107;
+      transition: transform 0.2s ease;
     }
 
-    .banner-text-outside {
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #00c292;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-      padding: 0.5rem;
+    .video-play-button:hover .icon-speaker {
+      transform: scale(1.1);
     }
 
     nav {
@@ -85,10 +80,10 @@
 
     nav a {
       color: #fff;
-      margin: 0 15px;
+      margin: 0 20px;
+      text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
-      text-decoration: none;
     }
 
     nav a:hover {
@@ -101,21 +96,18 @@
       margin: auto;
     }
 
-    .highlight {
-      color: #00e676;
-      font-weight: bold;
-      font-size: 1.2rem;
+    h2 {
+      color: #ffc107;
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
 
-    .patent-gallery img {
-      max-width: 130px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: transform 0.2s ease;
+    ul {
+      padding-left: 15px;
     }
 
-    .patent-gallery img:hover {
-      transform: scale(1.05);
+    ul li {
+      margin: 10px 0;
     }
 
     .cta {
@@ -134,8 +126,8 @@
       padding: 12px 24px;
       background: #000;
       color: #fff;
-      border-radius: 5px;
       text-decoration: none;
+      border-radius: 5px;
       font-weight: bold;
     }
 
@@ -143,22 +135,52 @@
       background: #333;
     }
 
+    .banner-text-outside {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      padding: 0.5rem 0.5rem;
+      color: #00c292;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .patent-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .patent-gallery img {
+      max-width: 130px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .patent-gallery img:hover {
+      transform: scale(1.05);
+    }
+
     footer {
       background: #111;
       padding: 20px;
       text-align: center;
-      color: #bbb;
       font-size: 0.9rem;
+      color: #bbb;
     }
 
     @media (max-width: 768px) {
       .banner-text-outside {
         font-size: 1.8rem;
+        padding: 1.5rem 1rem;
       }
 
       .video-play-button {
         width: 32px;
         height: 32px;
+        font-size: 14px;
         bottom: 8px;
         right: 8px;
       }
@@ -167,6 +189,20 @@
         max-width: 100px;
       }
     }
+
+    a {
+      color: #ffa500;
+    }
+
+    a:hover {
+      color: #ffca2c;
+    }
+    
+    .highlight {
+      color: #00e676;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
   </style>
 </head>
 <body>
@@ -174,8 +210,8 @@
 <header>
   <div class="video-container">
     <video id="logoVideo" src="rubx-logo.mp4" autoplay muted loop playsinline></video>
-    <button class="video-play-button" onclick="unmuteLogoVideo()" aria-label="Unmute video">
-      <svg class="icon-speaker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <button class="video-play-button" onclick="playVideo()" aria-label="Unmute video">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="icon-speaker">
         <path d="M11.536 14.01a.5.5 0 0 1-.69-.145 6.518 6.518 0 0 0 0-11.729.5.5 0 1 1 .69-.723 7.518 7.518 0 0 1 0 13.597z"/>
         <path d="M8.707 11.707a1 1 0 0 0 1.415 0l2.829-2.829a1 1 0 0 0 0-1.415L10.122 4.634a1 1 0 0 0-1.415 1.414L11.122 8l-2.415 2.415a1 1 0 0 0 0 1.292z"/>
         <path d="M5 9H2V7h3V5a.5.5 0 0 1 .854-.354l3 3a.5.5 0 0 1 0 .708l-3 3A.5.5 0 0 1 5 11V9z"/>
@@ -184,23 +220,23 @@
   </div>
 </header>
 
-<main>
-  <div class="banner-text-outside">Revolutionizing Rubber Harvesting</div>
+<div class="banner-text-outside">Revolutionizing Rubber Harvesting</div>
 
-  <nav>
-    <a href="#mission">Mission</a>
-    <a href="#why">Why Rub-X</a>
-    <a href="#product">Product</a>
-    <a href="#partners">Partnership</a>
-    <a href="#patent">Patent</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#mission">Mission</a>
+  <a href="#why">Why Rub-X</a>
+  <a href="#product">Product</a>
+  <a href="#partners">Partnership</a>
+  <a href="#patent">Patent</a>
+  <a href="#contact">Contact</a>
+</nav>
 
 <section id="mission">
   <div style="text-align:center; margin: -20px auto 80px auto;">
     <img src="golden-plaque.png" alt="Rub-X Golden Plaque"
          style="max-width:360px; width:90%; height:auto; border-radius:12px; box-shadow:0 0 12px rgba(255,215,0,0.4);" />
   </div>
+
 
   
 
