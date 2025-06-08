@@ -66,6 +66,55 @@
   max-width: 500px;
   margin: 0 auto;
 }
+    nav {
+  background-color: #003366;
+  color: white;
+  padding: 12px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.nav-left a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-left a:hover {
+  text-decoration: underline;
+}
+
+.nav-right button {
+  background: #fff;
+  color: #003366;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-left, .nav-right {
+    margin-top: 10px;
+  }
+}
+
 
 .logo-image {
   width: 100%;
@@ -83,6 +132,21 @@
     <img src="rubx-logo.png" alt="Rub-X Logo" class="logo-image">
   </div>
 </header>
+  <nav>
+  <div class="nav-container">
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="response.html">Response</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button onclick="switchLang('en')">EN</button>
+      <button onclick="switchLang('zh')">中文</button>
+    </div>
+  </div>
+</nav>
+
 
 
 
