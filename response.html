@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rub-X Project: A 3-Year International Response Record (2022–2025)</title>
+  <title>Rub-X Project: A 3-Year International Response Record (2022–2025) – Innovation Awaiting Global Fairness</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
@@ -12,21 +12,30 @@
       background: #f7f7f7;
       color: #333;
     }
-    header {
-      background: #003366;
-      padding: 1em;
-      color: white;
-    }
-    .header-content {
+    header, section {
       max-width: 960px;
       margin: auto;
+      padding: 2em;
+      background: #fff;
+      margin-top: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
+      background: #003366;
+      padding: 1em;
     }
-    .header-content img {
-      height: 50px;
+    nav .logo {
+      display: flex;
+      align-items: center;
+    }
+    nav img {
+      height: 40px;
+      margin-right: 1em;
     }
     nav .menu a {
       color: white;
@@ -36,6 +45,9 @@
     }
     nav .menu a:hover {
       text-decoration: underline;
+    }
+    nav .lang-switch {
+      margin-left: auto;
     }
     nav .lang-switch button {
       background: #fff;
@@ -49,15 +61,6 @@
     }
     h1, h2, h3 {
       color: #003366;
-    }
-    section {
-      max-width: 960px;
-      margin: auto;
-      padding: 2em;
-      background: #fff;
-      margin-top: 2em;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     table {
       width: 100%;
@@ -86,77 +89,101 @@
       border-left: 4px solid #0066cc;
     }
     @media screen and (max-width: 600px) {
-      .header-content {
+      nav {
         flex-direction: column;
         align-items: flex-start;
       }
+      nav .menu, nav .lang-switch {
+        margin-top: 0.5em;
+      }
+    }
+   .video-container {
+      position: relative;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .logo-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: none;
+      border-radius: 0;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="header-content">
-      <img src="rubx-logo.png" alt="Rub-X Logo">
-      <nav class="menu">
-        <a href="#intro">Introduction</a>
-        <a href="#validation">Industry Validation</a>
-        <a href="#support">Call for Support</a>
-      </nav>
+    <div class="video-container">
+      <img src="rubx-logo.png" alt="Rub-X Logo" class="logo-image">
     </div>
   </header>
 
-  <section id="intro">
-    <h2>Introduction</h2>
-    <p>
-      This page documents the 3-year international journey of Rub-X (2022–2025), an ultra-low-cost automation system for sustainable natural rubber harvesting. Despite widespread recognition of its innovation, Rub-X has not yet received sufficient institutional or international support.
-    </p>
-  </section>
+  <nav>
+    <div class="logo">
+      <img src="rubx-icon.png" alt="Rub-X Icon">
+      <span style="color: white; font-weight: bold; font-size: 1.2em;">Rub-X Response Record</span>
+    </div>
+    <div class="menu">
+      <a href="/">Home</a>
+      <a href="/product.html">Product</a>
+      <a href="/partnership.html">Partnership</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div class="lang-switch">
+      <button onclick="window.location.href='record-cn.html'">中文</button>
+    </div>
+  </nav>
 
-  <section id="validation">
-    <h2>Industry Validation</h2>
-    <p>
-      Between 2022 and 2025, the Rub-X project proactively engaged with key institutions and stakeholders in the natural rubber industry, including associations, research institutes, and policy-related entities across Asia. Although most responses were informal or not issued as official endorsements, the following institutions either acknowledged the innovation or affirmed its potential through written replies, expert comments, or intermediary feedback:
-    </p>
+  <section>
+    <h1>Rub-X: A 3-Year International Response Record (2022–2025)</h1>
+    <p><strong>Rub-X</strong> is a breakthrough automation system for natural rubber tapping. Between 2022 and 2025, this independently developed, low-cost, low-energy, terrain-adaptable, and field-validated green technology has reached multiple international institutions. Yet despite confirmations of interest, no substantive support has been granted.</p>
+
+    <h2>Key Milestones</h2>
     <ul>
-      <li><strong>China Natural Rubber Association (CNRA)</strong>: Recognized the labor shortage crisis and acknowledged the value of Rub-X.</li>
-      <li><strong>Chinese Academy of Tropical Agricultural Sciences (CATAS)</strong>: Confirmed technical interest and suggested further feasibility exploration.</li>
-      <li><strong>Hainan University Rubber Institute</strong>: Researchers noted Rub-X’s potential and expressed openness to collaboration.</li>
-      <li><strong>Confexhub (Malaysia)</strong>: Industry experts confirmed Rub-X as the only known terrain-adaptive automation solution.</li>
-      <li><strong>Association of Natural Rubber Producing Countries (ANRPC)</strong>: Intermediary discussions showed alignment, though no formal support emerged.</li>
+      <li>2022: Initial demo completed; interest from Chinese and Malaysian institutions</li>
+      <li>2023: Introduced to ANRPC, CATAS, Confexhub, and other regional stakeholders</li>
+      <li>2024: Rub-X included in <a href="https://www3.wipo.int/wipogreen" target="_blank" class="pdf-link">WIPO GREEN</a> platform as a listed green technology</li>
+      <li>2025: Formal invitations sent to UNDP, WIPO, and U.S. agencies for hosting or support collaboration</li>
     </ul>
-    <p>
-      These interactions reflect peer-level recognition across key producer regions, though no policy mechanisms have materialized.
-    </p>
+
+    <h2>Record of Outreach</h2>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Institution</th><th>Contact / Office</th><th>Response</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2023.03</td><td>ANRPC</td><td>Secretary-General</td><td>Interest, no follow-up</td></tr>
+        <tr><td>2023.06</td><td>CATAS / Hainan Univ.</td><td>Tech teams</td><td>Confirmed feasibility, no partnership</td></tr>
+        <tr><td>2024.04</td><td>Confexhub (Malaysia)</td><td>Innovation Forum</td><td>Expressed alignment, no reply after Q2</td></tr>
+        <tr><td>2024.10</td><td>WIPO GREEN</td><td>Platform submission</td><td>Approved & listed</td></tr>
+        <tr><td>2025.05</td><td>UNDP (NY + China)</td><td>SDG & innovation officers</td><td>No reply</td></tr>
+        <tr><td>2025.06</td><td>U.S. Commercial Service</td><td>international trade and IP facilitation</td><td>Acknowledged receipt</td></tr>
+        <tr><td>2025.06</td><td>Montgomery County EDC</td><td>Business Community Engagement</td><td>Email sent, awaiting response</td></tr>
+      </tbody>
+    </table>
+   
+
+  <p>This record reflects a recurring pattern: Rub-X is technically acknowledged but structurally unsupported. Without official endorsement or hosting by a recognized institution or government body, its pathway to scalable deployment remains blocked—despite the technology being verified and globally relevant.</p>
+</section>
+
+
+    <h2>Project Video</h2>
+    <p><a href="https://www.rub-x.org/product.html#video" target="_blank" class="video-link">Watch full demo here</a></p>
+
+    <h2>Why This Matters</h2>
     <blockquote>
-      "Your idea to solve the labor shortage with low-cost automation is exactly what we need. Please keep pushing forward." — Anonymous industry expert via Confexhub, 2023
+      "Without an effective automation solution, the global natural rubber industry cannot meet sustainability and labor availability targets. Rub-X may be the only proven low-cost approach fit for emerging economies and forest terrains."
     </blockquote>
-    <p>
-      Screenshots of the above exchanges are archived and can be provided upon request.
-    </p>
-  </section>
 
-  <section id="support">
-    <h2>Call for Support</h2>
-    <p>
-      The Rub-X system is now listed on the <a class="pdf-link" href="https://www.wipo.int/green-technology-database/en/details/6118" target="_blank">WIPO GREEN platform</a>, and initial contact has been made with UNDP and other international bodies. However, no meaningful response or action has followed.
-    </p>
-    <p>
-      This project has reached a stage where solo advancement is no longer viable. It involves cross-border innovation, global labor dynamics, and sustainable development goals. We urgently call upon U.S. and international agencies, economic development bodies, and fair-minded institutions to step forward and assist in facilitating:
-    </p>
-    <ul>
-      <li>Recognition of Rub-X as a strategic, terrain-adaptive green technology</li>
-      <li>Supportive international cooperation frameworks</li>
-      <li>Deployment and pilot trials in rubber-producing regions</li>
-    </ul>
-    <p>
-      Without timely and fair support, Rub-X — despite its breakthrough nature — may fall into geopolitical ambiguity and institutional neglect.
-    </p>
+    <h3>Rub-X seeks fair collaboration — not silence.</h3>
+    <p>This technology deserves structured, international support. If county, state, or federal agencies cannot recognize and advance such projects, the very idea of green innovation and inclusion is undermined.</p>
   </section>
 
   <footer>
-    &copy; 2025 Rub-X Project | <a href="mailto:contact@rub-x.org">contact@rub-x.org</a>
+    &copy; 2025 Rub-X Project | contact@rub-x.org
   </footer>
+
 </body>
 </html>
-
 
