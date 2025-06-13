@@ -123,8 +123,19 @@
   border: none;
   border-radius: 0;
 }
+  .show-btn { cursor: pointer; padding: 4px 8px; background: #007BFF; color: white; border: none; border-radius: 4px; }
+  .details { display: none; }
+  .email-log img { max-width: 100%; border: 1px solid #ccc; margin: 10px 0; }
 
   </style>
+  <script>
+  function toggleDetails(btn) {
+    const row = btn.closest("tr");
+    const detailsRow = row.nextElementSibling;
+    detailsRow.style.display = (detailsRow.style.display === "table-row") ? "none" : "table-row";
+    btn.textContent = (detailsRow.style.display === "table-row") ? "Hide" : "Show";
+  }
+</script>
 </head>
 <body>
 <header>
@@ -152,24 +163,75 @@
   <section>
     <h2>1. Record of Outreach</h2>
     <table>
-      <thead>
-        <tr><th>Date</th><th>Institution</th><th>Contact</th><th>Outcome</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>2016.08</td><td>University of Maryland</td><td>Terrapin Works</td><td>Short Term Joined, no follow-up</td></tr>
-        <tr><td>2017–2025.03</td><td>CATAS</td><td>Research Teams</td><td>Interest, doubt, no partnership</td></tr>
-        <tr><td>2018</td><td>Hainan Rubber Group</td><td>Project Manager</td><td>Interest, Short Term Connection, no partnership</td></tr>
-        <tr><td>2023.12</td><td>Hainan University</td><td>Research Teams</td><td>Interest, funded a prototype, confirmed feasibility, later doubt, no partnership</td></tr>
-        <tr><td>2023.03</td><td>ANRPC</td><td>Secretary-General</td><td>Interest, no follow-up</td></tr>
-        <tr><td>2024.08</td><td>Côte d'Ivoire Company</td><td>Company Owner</td><td>Interest, silence</td></tr>
-        <tr><td>2025.03</td><td>China Ministry of Agriculture</td><td>Indirect Channels</td><td>Vague response</td></tr>
-        <tr><td>2022.10</td><td>Confexhub (Malaysia)</td><td>Innovation Forum</td><td>Expressed alignment, no further actions after Q2</td></tr>
-        <tr><td>2024.10</td><td>WIPO GREEN</td><td>Platform Submission</td><td>Approved & listed</td></tr>
-        <tr><td>2025.02</td><td>UNDP</td><td>SDG & Innovation Officers</td><td>No reply</td></tr>
-        <tr><td>2025.06</td><td>U.S. Commercial Service</td><td>Trade & IP Facilitation</td><td>Acknowledged receipt</td></tr>
-        <tr><td>2025.06</td><td>Montgomery County EDC</td><td>Business Engagement</td><td>Email sent, awaiting response</td></tr>
-      </tbody>
-    </table>
+  <thead>
+    <tr>
+      <th>Date</th><th>Institution</th><th>Contact</th><th>Outcome</th><th>Record</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- 示例 1: UNDP -->
+    <tr>
+      <td>2025.02</td>
+      <td>UNDP</td>
+      <td>SDG & Innovation Officers</td>
+      <td>No reply</td>
+      <td><button class="show-btn" onclick="toggleDetails(this)">Show</button></td>
+    </tr>
+    <tr class="details">
+      <td colspan="5">
+        <div class="email-log">
+          <p><strong>📩 2025-02-03 – Sent to gc-tisd@undp.org</strong><br>Subject: Partnership Invitation – Rub-X</p>
+          <img src="images/undp_email_20250203.png" alt="Email Screenshot">
+          
+          <p><strong>📩 2025-02-10 – Follow-up to innovation.rbec@undp.org</strong><br>No response received.</p>
+          <img src="images/undp_email_20250210.png" alt="Reminder Email Screenshot">
+        </div>
+      </td>
+    </tr>
+
+    <!-- 示例 2: CATAS -->
+    <tr>
+      <td>2017–2025.03</td>
+      <td>CATAS</td>
+      <td>Research Teams</td>
+      <td>Interest, doubt, no partnership</td>
+      <td><button class="show-btn" onclick="toggleDetails(this)">Show</button></td>
+    </tr>
+    <tr class="details">
+      <td colspan="5">
+        <div class="email-log">
+          <p><strong>📩 2020-06 – Sent to CATAS engineering group</strong><br>Subject: Request for joint field test collaboration</p>
+          <img src="images/catas_email_202006.png" alt="Email to CATAS">
+
+          <p><strong>📩 2023-10 – Final email to director-level contacts</strong></p>
+          <img src="images/catas_email_202310.png" alt="Follow-up CATAS Email">
+        </div>
+      </td>
+    </tr>
+
+    <!-- 示例 3: WIPO GREEN -->
+    <tr>
+      <td>2024.10</td>
+      <td>WIPO GREEN</td>
+      <td>Platform Submission</td>
+      <td>Approved & listed</td>
+      <td><button class="show-btn" onclick="toggleDetails(this)">Show</button></td>
+    </tr>
+    <tr class="details">
+      <td colspan="5">
+        <div class="email-log">
+          <p><strong>📩 2024-10 – WIPO GREEN listing approved</strong></p>
+          <img src="images/wipo_green_confirmation.png" alt="WIPO GREEN Confirmation">
+        </div>
+      </td>
+    </tr>
+
+    <!-- 其余记录按相同格式添加 -->
+    
+  </tbody>
+</table>
+
   </section>
 
   <section>
