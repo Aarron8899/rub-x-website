@@ -132,10 +132,15 @@
   function toggleDetails(btn) {
     const row = btn.closest("tr");
     const detailsRow = row.nextElementSibling;
-    detailsRow.style.display = (detailsRow.style.display === "table-row") ? "none" : "table-row";
-    btn.textContent = (detailsRow.style.display === "table-row") ? "Hide" : "Show";
+    
+    if (!detailsRow) return;
+
+    const isHidden = getComputedStyle(detailsRow).display === "none";
+    detailsRow.style.display = isHidden ? "table-row" : "none";
+    btn.textContent = isHidden ? "Hide" : "Show";
   }
 </script>
+
 </head>
 <body>
   <header>
