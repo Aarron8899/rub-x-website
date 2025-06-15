@@ -156,16 +156,85 @@
     </div>
   </header>
 
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Navigation Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    nav {
+      background-color: #003366;
+      padding: 12px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center; /* 居中 */
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .nav-container a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .nav-container a:hover {
+      text-decoration: underline;
+    }
+
+    /* 可选：响应式 */
+    @media screen and (max-width: 600px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+    }
+
+    /* 页面主体 */
+    .content {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .content h1 {
+      color: #003366;
+    }
+  </style>
+</head>
+<body>
+
   <nav>
-    <div class="container nav-container">
-      <div class="nav-center">
-        <a href="index.html">Home</a>
-        <a href="product.html">Product</a>
-        <a href="response.html">Response</a>
-        <a href="contact.html">Contact</a>
-      </div>
+    <div class="nav-container">
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="response.html">Response</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
+
+  <div class="content">
+    <h1>Welcome to the Navigation Demo</h1>
+    <p>This is a demonstration of a centered navigation bar with responsive design.</p>
+  </div>
+
+</body>
+
+
  <div class="container">
 
    <section id="rubx-decade-overview" style="background-color: #f4f4f4;padding:40px 20px;border-bottom:1px solid #ddd;">
