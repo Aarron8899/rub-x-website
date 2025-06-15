@@ -6,9 +6,9 @@
   <title>Rub-X Product Details</title>
   <style>
     body {
-      font-family: sans-serif;
       margin: 0;
-      padding: 0;
+    font-family: Arial, sans-serif;
+     padding: 0;
       line-height: 1.6;
       background-color: #f9f9f9;
       color: #333;
@@ -20,10 +20,10 @@
       padding: 20px 0;
     }
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
     h1, h2 {
       color: #222;
     }
@@ -31,21 +31,26 @@
       padding-left: 20px;
     }
     img {
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    }
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
     table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
+    width: 100%;
+    border-collapse: collapse;
+    word-wrap: break-word;
+    table-layout: fixed;
+  }
     table, th, td {
       border: 1px solid #ccc;
     }
     th, td {
-      padding: 10px;
-      text-align: left;
-    }
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+    word-break: break-word;
+  }
     .gallery {
       display: flex;
       gap: 20px;
@@ -123,7 +128,7 @@
   border: none;
   border-radius: 0;
 }
-  .show-btn { cursor: pointer; padding: 4px 8px; background: #007BFF; color: white; border: none; border-radius: 4px; }
+  .show-btn { cursor: pointer; padding: 5px 10px; font-size: 14px; background: #007BFF; color: white; border: none; border-radius: 4px; }
   .details { display: none; }
   .email-log img { max-width: 100%; border: 1px solid #ccc; margin: 10px 0; }
 
