@@ -2,16 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rub-X Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rub-X: Call for Action</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
+      padding: 2rem;
       font-family: Arial, sans-serif;
       line-height: 1.6;
       background-color: #f9f9f9;
@@ -25,6 +21,75 @@
       padding: 20px 0;
     }
 
+    .container {
+      max-width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    h1, h2 {
+      color: #222;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      word-wrap: break-word;
+      table-layout: fixed;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      word-break: break-word;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #007acc;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 30px;
+    }
+
+    .video-container {
+      position: relative;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .logo-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: none;
+      border-radius: 0;
+    }
+
     nav {
       background-color: #003366;
       color: white;
@@ -33,13 +98,13 @@
     }
 
     .nav-container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 0 auto;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
       flex-wrap: wrap;
+      padding: 0 20px;
     }
 
     .nav-container a {
@@ -47,10 +112,49 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
+      margin: 0 10px;
     }
 
     .nav-container a:hover {
       text-decoration: underline;
+    }
+
+    .nav-right button {
+      background: #fff;
+      color: #003366;
+      border: none;
+      padding: 6px 12px;
+      margin-left: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 600px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .nav-left,
+      .nav-right {
+        margin-top: 10px;
+      }
+    }
+
+    p {
+      max-width: 800px;
+      margin: 0 auto 1.5rem auto;
+    }
+
+    strong {
+      color: #2a5d84;
+    }
+
+    em {
+      color: #b03a2e;
     }
 
     .content {
@@ -58,23 +162,44 @@
       text-align: center;
     }
 
-    .logo-image {
-      width: 100%;
-      height: auto;
-      display: block;
+    .content h1 {
+      color: #003366;
     }
 
-    /* 其他样式可根据需要添加 */
+    .show-btn {
+      cursor: pointer;
+      padding: 5px 10px;
+      font-size: 14px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .details {
+      display: none;
+    }
+
+    .email-log img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      margin: 10px 0;
+    }
   </style>
+
+  <script>
+    function toggleDetails(btn) {
+      const row = btn.closest("tr");
+      const detailsRow = row.nextElementSibling;
+      if (!detailsRow) return;
+      const isHidden = getComputedStyle(detailsRow).display === "none";
+      detailsRow.style.display = isHidden ? "table-row" : "none";
+      btn.textContent = isHidden ? "Hide" : "Show";
+    }
+  </script>
 </head>
+
 <body>
-
-  <header>
-    <div class="video-container">
-      <img src="rubx-logo1.PNG" alt="Rub-X Logo" class="logo-image">
-    </div>
-  </header>
-
   <nav>
     <div class="nav-container">
       <a href="index.html">Home</a>
@@ -85,14 +210,27 @@
     </div>
   </nav>
 
-</body>
+  <header>
+    <div class="container">
+      <div class="video-container">
+        <img src="rubx-logo1.PNG" alt="Rub-X Logo" class="logo-image">
+      </div>
+    </div>
+  </header>
 
+  <main class="content">
+    <h1>Rub-X: Call for Global Action</h1>
+    <p><strong>Rub-X</strong> is a proven, low-cost automation breakthrough for rubber tapping in remote areas. We urge global institutions to step up.</p>
+    <a href="call-to-un.html" class="cta-button">Support Our UN Appeal</a>
+  </main>
 
  <div class="container">
+  <section id="rubx-decade-overview" style="background-color: #f4f4f4; padding:40px 20px; border-bottom:1px solid #ddd;">
+    <div style="max-width:900px; margin:0 auto; font-family:'Segoe UI', Arial, sans-serif;">
+      <h2 style="text-align:center; font-size:28px; margin-bottom:20px;">
+        Rub-X: Ten-Year Development Records（2015–2025）<br>
+      </h2>
 
-   <section id="rubx-decade-overview" style="background-color: #f4f4f4;padding:40px 20px;border-bottom:1px solid #ddd;">
-  <div style="max-width:900px;margin:0 auto;font-family:'Segoe UI',Arial,sans-serif;">
-    <h2 style="text-align:center;font-size:28px;margin-bottom:20px;">Rub-X: Ten-Year Development Records（2015–2025）<br></h2>
 
  <p>
   Through a <strong>comprehensive understanding</strong> of <strong>Rub-X’s ten-year journey</strong>—including its 
