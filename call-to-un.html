@@ -1,257 +1,4 @@
-<!DOCTYPE html> 
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rub-X Product Details</title>
-  <style>
-    body {
-      margin: 0;
-    font-family: Arial, sans-serif;
-     padding: 0;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header, footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-    .container {
-    max-width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-    h1, h2 {
-      color: #222;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-  }
-    table {
-    width: 100%;
-    border-collapse: collapse;
-    word-wrap: break-word;
-    table-layout: fixed;
-  }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th, td {
-    padding: 8px;
-    border: 1px solid #ddd;
-    text-align: left;
-    word-break: break-word;
-  }
-    .gallery {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin: 20px 0;
-    }
-    .cta-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #007acc;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 30px;
-    }
-    .video-container {
-  position: relative;
-  max-width: 500px;
-  margin: 0 auto;
-}
-    nav {
-  background-color: #003366;
-  color: white;
-  padding: 12px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.nav-container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0 20px;
-}
-
-.nav-left a {
-  color: white;
-  margin-right: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav-left a:hover {
-  text-decoration: underline;
-}
-
-.nav-right button {
-  background: #fff;
-  color: #003366;
-  border: none;
-  padding: 6px 12px;
-  margin-left: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 600px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-left, .nav-right {
-    margin-top: 10px;
-  }
-}
-
-
-.logo-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: none;
-  border-radius: 0;
-}
-  .show-btn { cursor: pointer; padding: 5px 10px; font-size: 14px; background: #007BFF; color: white; border: none; border-radius: 4px; }
-  .details { display: none; }
-  .email-log img { max-width: 100%; border: 1px solid #ccc; margin: 10px 0; }
-
-  </style>
-  <script>
-  function toggleDetails(btn) {
-    const row = btn.closest("tr");
-    const detailsRow = row.nextElementSibling;
-    
-    if (!detailsRow) return;
-
-    const isHidden = getComputedStyle(detailsRow).display === "none";
-    detailsRow.style.display = isHidden ? "table-row" : "none";
-    btn.textContent = isHidden ? "Hide" : "Show";
-  }
-</script>
-
-</head>
-<body>
-  <header>
-    <div class="container">
-      <div class="video-container">
-        <img src="rubx-logo1.PNG" alt="Rub-X Logo" class="logo-image">
-      </div>
-    </div>
-  </header>
-
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Navigation Example</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-    }
-
-    nav {
-      background-color: #003366;
-      padding: 12px 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center; /* 居中 */
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .nav-container a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .nav-container a:hover {
-      text-decoration: underline;
-    }
-
-    /* 可选：响应式 */
-    @media screen and (max-width: 600px) {
-      .nav-container {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-      }
-    }
-
-    /* 页面主体 */
-    .content {
-      padding: 40px;
-      text-align: center;
-    }
-
-    .content h1 {
-      color: #003366;
-    }
-  </style>
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rub-X: Call for Action</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 2rem;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    p {
-      max-width: 800px;
-      margin: 0 auto 1.5rem auto;
-    }
-    strong {
-      color: #2a5d84;
-    }
-    em {
-      color: #b03a2e;
-    }
-  </style>
-</head>
-</head>
-<body>
-
-  <nav>
-    <div class="nav-container">
-      <a href="index.html">Home</a>
-      <a href="product.html">Product</a>
-      <a href="response.html">Response</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-  
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -259,16 +6,123 @@
   <title>Rub-X: Call to the United Nations</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f8f9fa; color: #333; }
-    header, footer { background: #003366; color: white; padding: 1rem; text-align: center; }
-    .container { padding: 2rem; max-width: 960px; margin: auto; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
-    h1, h2 { color: #003366; }
-    .btn { display: inline-block; padding: 0.7rem 1.2rem; margin: 0.5rem 0; background: #0077cc; color: white; text-decoration: none; border-radius: 4px; }
-    .btn-accent { background: #cc0000; }
-    blockquote { border-left: 5px solid #0077cc; margin: 1rem 0; padding-left: 1rem; font-style: italic; color: #444; }
-    .cta-box { background: #eef4f8; padding: 1.5rem; margin-top: 2rem; border-left: 5px solid #cc0000; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header, footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav {
+      background-color: #003366;
+      padding: 12px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .nav-container a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .nav-container a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h1, h2 {
+      color: #003366;
+    }
+    blockquote {
+      border-left: 5px solid #0077cc;
+      margin: 1.5rem 0;
+      padding-left: 1rem;
+      font-style: italic;
+      color: #555;
+    }
+    .cta-box {
+      background-color: #eef4f8;
+      border-left: 5px solid #cc0000;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      margin-top: 1rem;
+      background-color: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .logo-image {
+      max-width: 180px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
   </style>
 </head>
+<body>
+
+  <header>
+    <img src="rubx-logo1.PNG" alt="Rub-X Logo" class="logo-image" />
+    <h2>Rub-X: A Practical Innovation for Global Sustainability</h2>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="response.html">Response</a>
+      <a href="call-to-un.html">Call to UN</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Call to the United Nations and Global Institutions</h1>
+    <p>
+      We urge the United Nations and its affiliated institutions to act responsibly and support the international validation and deployment of field-tested climate innovations that address real-world labor and environmental challenges.
+    </p>
+
+    <blockquote>
+      “The Rub-X system is not a concept. It has been built, tested, and proven viable. We now call on institutions with global mandates for innovation, agriculture, and sustainability to take action.”
+    </blockquote>
+
+    <p>
+      The Rub-X team has spent years developing a low-cost, terrain-flexible, energy-efficient automated tapping system for rubber plantations. This innovation directly supports the SDGs by replacing hazardous manual labor with a reliable automation solution.
+    </p>
+
+    <div class="cta-box">
+      <h2>We are calling for:</h2>
+      <ul>
+        <li>Global pilot projects through UN or national agencies</li>
+        <li>Brand and technology hosting partnerships</li>
+        <li>Transparent acknowledgment of institutional responses and inaction</li>
+      </ul>
+      <a href="Rub-X_Cooperation_Proposal.pdf" class="btn">Download Full Proposal</a>
+    </div>
+  </main>
 <body>
   <header>
     <h1>Urgent Call to the United Nations</h1>
