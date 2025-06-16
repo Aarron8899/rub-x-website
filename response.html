@@ -1,188 +1,45 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rub-X Product Details</title>
   <style>
-    body {
+    * {
       margin: 0;
-    font-family: Arial, sans-serif;
-     padding: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
       line-height: 1.6;
       background-color: #f9f9f9;
       color: #333;
     }
+
     header, footer {
       background-color: #222;
       color: white;
       text-align: center;
       padding: 20px 0;
     }
-    .container {
-    max-width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-    h1, h2 {
-      color: #222;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-  }
-    table {
-    width: 100%;
-    border-collapse: collapse;
-    word-wrap: break-word;
-    table-layout: fixed;
-  }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th, td {
-    padding: 8px;
-    border: 1px solid #ddd;
-    text-align: left;
-    word-break: break-word;
-  }
-    .gallery {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin: 20px 0;
-    }
-    .cta-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #007acc;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 30px;
-    }
-    .video-container {
-  position: relative;
-  max-width: 500px;
-  margin: 0 auto;
-}
-    nav {
-  background-color: #003366;
-  color: white;
-  padding: 12px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.nav-container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0 20px;
-}
-
-.nav-left a {
-  color: white;
-  margin-right: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav-left a:hover {
-  text-decoration: underline;
-}
-
-.nav-right button {
-  background: #fff;
-  color: #003366;
-  border: none;
-  padding: 6px 12px;
-  margin-left: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 600px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-left, .nav-right {
-    margin-top: 10px;
-  }
-}
-
-
-.logo-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: none;
-  border-radius: 0;
-}
-  .show-btn { cursor: pointer; padding: 5px 10px; font-size: 14px; background: #007BFF; color: white; border: none; border-radius: 4px; }
-  .details { display: none; }
-  .email-log img { max-width: 100%; border: 1px solid #ccc; margin: 10px 0; }
-
-  </style>
-  <script>
-  function toggleDetails(btn) {
-    const row = btn.closest("tr");
-    const detailsRow = row.nextElementSibling;
-    
-    if (!detailsRow) return;
-
-    const isHidden = getComputedStyle(detailsRow).display === "none";
-    detailsRow.style.display = isHidden ? "table-row" : "none";
-    btn.textContent = isHidden ? "Hide" : "Show";
-  }
-</script>
-
-</head>
-<body>
-  <header>
-    <div class="container">
-      <div class="video-container">
-        <img src="rubx-logo1.PNG" alt="Rub-X Logo" class="logo-image">
-      </div>
-    </div>
-  </header>
-
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Navigation Example</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-    }
 
     nav {
       background-color: #003366;
+      color: white;
       padding: 12px 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .nav-container {
       max-width: 1000px;
       margin: 0 auto;
       display: flex;
-      justify-content: center; /* 居中 */
+      justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .nav-container a {
@@ -196,51 +53,27 @@
       text-decoration: underline;
     }
 
-    /* 可选：响应式 */
-    @media screen and (max-width: 600px) {
-      .nav-container {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-      }
-    }
-
-    /* 页面主体 */
     .content {
       padding: 40px;
       text-align: center;
     }
 
-    .content h1 {
-      color: #003366;
+    .logo-image {
+      width: 100%;
+      height: auto;
+      display: block;
     }
+
+    /* 其他样式可根据需要添加 */
   </style>
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rub-X: Call for Action</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 2rem;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    p {
-      max-width: 800px;
-      margin: 0 auto 1.5rem auto;
-    }
-    strong {
-      color: #2a5d84;
-    }
-    em {
-      color: #b03a2e;
-    }
-  </style>
-</head>
 </head>
 <body>
+
+  <header>
+    <div class="video-container">
+      <img src="rubx-logo1.PNG" alt="Rub-X Logo" class="logo-image">
+    </div>
+  </header>
 
   <nav>
     <div class="nav-container">
