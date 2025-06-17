@@ -64,19 +64,32 @@
       font-weight: bold;
       border-radius: 5px;
     }
-    nav {
-  margin-top: 1rem;
-}
-nav a {
-  color: white;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-nav a:hover {
-  text-decoration: underline;
-  color: #fcbf49;
-}
+     nav {
+      background-color: #003366;
+      padding: 12px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+     .nav-container a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 10px;
+    }
+
+    .nav-container a:hover {
+      text-decoration: underline;
+    }
 
   </style>
 </head>
