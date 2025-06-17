@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rub-X: Call for Action</title>
+  <title>Rub-X: Call to the United Nations</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-
-  
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,13 +13,13 @@
       color: #333;
       line-height: 1.6;
     }
-    header, footer {
-  background-color: #003366;  
-  color: white;
-  text-align: center;
-  padding: 0px 0;
-}
 
+    header, footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
     nav {
       background-color: #003366;
       padding: 12px 0;
@@ -48,150 +47,31 @@
       text-decoration: underline;
     }
     
-    
-  h1, h2 {
-      color: #222;
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-
-    ul {
-      padding-left: 20px;
-    }
-
-.logo-image {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: none;
-  border-radius: 0;
-}
-    
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: auto;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      word-wrap: break-word;
-      table-layout: fixed;
-    }
-
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-
-    th, td {
-      padding: 8px;
-      text-align: left;
-      word-break: break-word;
-    }
-
-    .gallery {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin: 20px 0;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #007acc;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 30px;
-    }
-
-    .video-container {
-      position: relative;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .logo-image {
-      width: 100%;
-      height: auto;
-      display: block;
-      border: none;
-      border-radius: 0;
-    }
-
-    nav {
-      background-color: #003366;
-      color: white;
-      padding: 12px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .nav-container {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 0 20px;
-    }
-
-    .nav-container a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      margin: 0 10px;
-    }
-
-    .nav-container a:hover {
-      text-decoration: underline;
-    }
-
-    .nav-right button {
-      background: #fff;
+    h1, h2 {
       color: #003366;
-      border: none;
-      padding: 6px 12px;
-      margin-left: 10px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
+    }
+    blockquote {
+      border-left: 5px solid #0077cc;
+      margin: 1.5rem 0;
+      padding-left: 1rem;
+      font-style: italic;
+      color: #555;
+    }
+    .cta-box {
+      background-color: #eef4f8;
+      border-left: 5px solid #cc0000;
+      padding: 1.5rem;
+      margin-top: 2rem;
     }
 
-    @media screen and (max-width: 600px) {
-  .nav-container {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 10px;
-  }
-}
-
-      .nav-left,
-      .nav-right {
-        margin-top: 10px;
-      }
-    }
-
-    p {
-      max-width: 800px;
-      margin: 0 auto 1.5rem auto;
-    }
-
-    strong {
-      color: #2a5d84;
-    }
-
-    em {
-      color: #b03a2e;
-    }
-
-    .content {
+     .content {
       padding: 40px;
       text-align: center;
     }
@@ -210,38 +90,38 @@
       border-radius: 4px;
     }
 
-    .details {
-      display: none;
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      margin-top: 1rem;
+      background-color: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .btn-accent {
+      background-color: #cc0000;
     }
 
-    .email-log img {
-      max-width: 100%;
-      border: 1px solid #ccc;
-      margin: 10px 0;
-    }
+.logo-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-radius: 0;
+}
   </style>
-
-  <script>
-    function toggleDetails(btn) {
-      const row = btn.closest("tr");
-      const detailsRow = row.nextElementSibling;
-      if (!detailsRow) return;
-      const isHidden = getComputedStyle(detailsRow).display === "none";
-      detailsRow.style.display = isHidden ? "table-row" : "none";
-      btn.textContent = isHidden ? "Hide" : "Show";
-    }
-  </script>
 </head>
-
 <body>
- <header>
-    <div class="container">
-      <div class="video-container">
-        <img src="rubx-logo.png" alt="Rub-X Logo" class="logo-image">
-      </div>
-    </div>
+
+  <header>
+    <img src="rubx-logo.png" alt="Rub-X Logo" class="logo-image" />
+
   </header>
-  
+
   <nav>
     <div class="nav-container">
       <a href="index.html">Home</a>
