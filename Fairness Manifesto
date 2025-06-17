@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rub-X Fairness Manifesto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+    header {
+      background-color: #d62828;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header img {
+      max-width: 150px;
+      margin-top: 1rem;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .quote {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #555;
+      margin: 1rem 0;
+    }
+    .highlight {
+      color: #f77f00;
+      font-weight: bold;
+    }
+    .section-title {
+      color: #003049;
+      margin-top: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 2rem;
+      background-color: #003049;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rub-X: Fairness Manifesto</h1>
+    <img src="/images/rubx-logo.png" alt="Rub-X Logo">
+  </header>
+
+  <main>
+    <p class="quote">
+      "I am not speaking for myself. I am fighting for a fairer world."<br>
+      — Inventor, Founder of the Rub-X Project
+    </p>
+
+    <h2 class="section-title">Why Fairness Matters</h2>
+    <p>
+      Independent inventors are too often sidelined in the global response to real-world challenges.
+      The Rub-X project stands as a proven, practical, and ready-to-deploy solution for sustainable agriculture,
+      yet it has faced years of neglect from institutional channels that claim to support innovation.
+    </p>
+
+    <h2 class="section-title">Our Demands</h2>
+    <ul>
+      <li><span class="highlight">Recognition</span> of field-proven independent technologies</li>
+      <li><span class="highlight">Inclusion</span> in UN-backed trials, funding, and scaling programs</li>
+      <li><span class="highlight">Accountability</span> for institutions that delay or block innovation access</li>
+    </ul>
+
+    <h2 class="section-title">Rub-X: A Case for Action</h2>
+    <p>
+      Rub-X is a cost-effective, durable, and energy-efficient automation system for rubber tapping.
+      It has been built, tested, and verified — yet remains unsupported by those tasked with advancing sustainability.
+      We challenge UN agencies and global stakeholders to act not just in words, but in real pilot support.
+    </p>
+
+    <a href="call-to-un.html" class="cta-button">Support Our UN Appeal</a>
+  </main>
+
+  <footer>
+    &copy; 2025 Rub-X Project | <a href="https://www.rub-x.org" target="_blank">www.rub-x.org</a>
+  </footer>
+</body>
+</html>
