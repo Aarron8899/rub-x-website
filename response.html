@@ -140,6 +140,20 @@
 }
   </style>
 </head>
+
+  <script>
+function toggleDetails(button) {
+  const row = button.closest('tr');
+  const detailsRow = row.nextElementSibling;
+
+  if (detailsRow && detailsRow.classList.contains('details')) {
+    const isHidden = detailsRow.style.display === 'none' || detailsRow.style.display === '';
+    detailsRow.style.display = isHidden ? 'table-row' : 'none';
+    button.textContent = isHidden ? 'Hide' : 'Show';
+  }
+}
+</script>
+
 <body>
 
   <header>
