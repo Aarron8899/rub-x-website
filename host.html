@@ -103,3 +103,153 @@
   </div>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rub-X Institutional Hosting</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #004d40;
+    }
+    .notice {
+      background-color: #e0f2f1;
+      padding: 15px;
+      border-left: 6px solid #00796b;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background-color: #00796b;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #eeeeee;
+    }
+    #countdown {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #d32f2f;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    const targetDate = new Date("2025-07-10T00:00:00").getTime();
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s remaining";
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "This offer has expired. No institution responded.";
+      }
+    };
+    setInterval(updateCountdown, 1000);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Rub-X Institutional Hosting Cooperation</h1>
+    <div class="notice">
+      <strong>Important:</strong> Rub-X will no longer be promoted or licensed commercially. Institutional hosting is now the sole acceptable mode of cooperation. Without a trusted hosting institution, this technology will remain archived.
+    </div>
+
+    <h2>Institutional Responsibility Deadline</h2>
+    <p>All invited institutions are asked to respond before the following deadline. This public countdown records the time remaining to assume responsibility:</p>
+    <div id="countdown">Loading countdown...</div>
+
+    <h2>What Is Institutional Hosting?</h2>
+    <p>Rub-X is a field-ready, low-cost, terrain-adaptable automation system designed to replace hazardous manual rubber tapping. We are seeking one or more responsible institutions to formally host this technology for verification, field trials, and coordinated deployment.</p>
+    <p>Hosting does not require purchasing or owning the patent. It entails taking public responsibility for managing, testing, and guiding Rub-X through institutional channels, in line with global sustainability goals.</p>
+
+    <h2>Download Hosting Proposal</h2>
+    <p>All details, including hosting responsibilities and scope, are outlined in the PDF below:</p>
+    <a class="btn" href="/docs/RubX_Hosting_Proposal.pdf" target="_blank">Download Hosting Proposal (PDF)</a>
+
+    <p>Supporting Documents:</p>
+    <ul>
+      <li><a href="/product.html#video" target="_blank">Watch the Rub-X Demonstration Video</a></li>
+      <li><a href="/Record.html" target="_blank">Rub-X Institutional Engagement Record (3-Year History)</a></li>
+      <li><a href="/docs/RubX_Schematic_Public.pdf" target="_blank">Download Public System Schematic (PDF)</a></li>
+    </ul>
+
+    <h2>Response Tracking Table</h2>
+    <p>The following institutions were formally invited to host Rub-X. Their response status is publicly documented.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Institution</th>
+          <th>Invited Date</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>WIPO GREEN</td>
+          <td>2025-06-XX</td>
+          <td>Pending</td>
+          <td>Hosting proposal sent via email</td>
+        </tr>
+        <tr>
+          <td>UNDP Accelerator Labs</td>
+          <td>2025-06-XX</td>
+          <td>Pending</td>
+          <td>Proposal submitted with reference to SDG alignment</td>
+        </tr>
+        <tr>
+          <td>FAO Forestry Division</td>
+          <td>2025-06-XX</td>
+          <td>Pending</td>
+          <td>Included in institutional responsibility correspondence</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Statement on Unauthorized Use</h2>
+    <p>No institution, organization, or individual may use, copy, or deploy the Rub-X system unless formally entrusted through a hosting agreement. Any unlicensed activity will be regarded as infringement and will be publicly and legally pursued. The Rub-X system remains the intellectual property of Hanmin LLC.</p>
+
+    <h2>Contact</h2>
+    <p>If your institution is interested in formally hosting Rub-X, please contact us at:</p>
+    <p><strong>Email:</strong> <a href="mailto:info@rub-x.org">info@rub-x.org</a></p>
+  </div>
+</body>
+</html>
+
