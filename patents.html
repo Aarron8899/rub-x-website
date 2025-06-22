@@ -13,6 +13,52 @@
       background-color: #f9f9f9;
       color: #333;
     }
+
+     .patent-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .patent-gallery img {
+      max-width: 130px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .patent-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    @media (max-width: 768px) {
+      .banner-text-outside {
+        font-size: 1.8rem;
+        padding: 1.5rem 1rem;
+      }
+
+      .video-play-button {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+        bottom: 8px;
+        right: 8px;
+      }
+
+      .patent-gallery img {
+        max-width: 100px;
+      }
+    }
     header, footer {
       background-color: #222;
       color: white;
