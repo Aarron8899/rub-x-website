@@ -24,6 +24,12 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       border-radius: 10px;
     }
+        header, footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 0;
+    }
     
     nav {
       background-color: #003366;
@@ -101,12 +107,22 @@
     .btn-accent {
       background-color: #cc0000;
     }
-  header, footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
+
+      .full-logo-header {
+  width: 100%;
+  height: auto;
   padding: 0;
+  margin: 0;
+  background-color: #000; /* 可选底色 */
 }
+
+.full-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 
 .logo-image {
   width: 100%;
@@ -120,10 +136,10 @@
   </style>
 </head>
  <body>
-  <header>
-    <img src="rubx-logo.png" alt="Rub-X Logo" class="logo-image" />
+  <header class="full-logo-header">
+  <img src="rubx-logo.png" alt="Rub-X Logo" class="full-logo" />
+</header>
 
-  </header>
 
    <nav>
     <div class="nav-container">
