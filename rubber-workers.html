@@ -6,26 +6,50 @@
   <title>Rub-X: The Real Lives Behind Rubber</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      font-family: sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
+      background-color: #f9f9f9;
       color: #333;
     }
-    header {
-      background-color: #204040;
+    header, footer {
+      background-color: #222;
       color: white;
-      padding: 2em;
       text-align: center;
+      padding: 0;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
+    .logo-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: none;
+      border-radius: 0;
     }
-    header p {
-      font-size: 1.1em;
-      margin-top: 0.5em;
+    nav {
+      background-color: #003366;
+      padding: 12px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .nav-container a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 10px;
+    }
+    .nav-container a:hover {
+      text-decoration: underline;
     }
     section {
       padding: 2em 5%;
@@ -87,13 +111,6 @@
     .cta-button:hover {
       background-color: #8b2e2e;
     }
-    footer {
-      background-color: #204040;
-      color: white;
-      text-align: center;
-      padding: 1em;
-      font-size: 0.9em;
-    }
     @media (max-width: 768px) {
       .grid {
         flex-direction: column;
@@ -101,6 +118,23 @@
     }
   </style>
 </head>
+<body>
+  <header>
+    <img src="rubx-logo.png" alt="Rub-X Logo" class="logo-image" />
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html">Home</a>
+      <a href="patents.html">Patents</a>
+      <a href="product.html">Product</a>
+      <a href="rubber-workers.html">rubber-workers</a>
+      <a href="neutrality.html">Neutrality</a>
+      <a href="Record.html">Record</a>
+      <a href="call-to-un.html">Call to UN</a>
+    </div>
+  </nav>
+
 <body>
 <header>
   <h1>The Real Lives Behind Rubber: Why Rub-X Needs UN Custodianship</h1>
