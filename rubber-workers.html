@@ -93,6 +93,120 @@
         flex-direction: column;
       }
     }
+
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  background-color: #204040;
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header p {
+  font-size: 1.1em;
+  margin-top: 0.5em;
+}
+
+section {
+  padding: 2em 5%;
+}
+
+h2, h3 {
+  color: #204040;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.case {
+  background: white;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  flex: 1 1 calc(33% - 2em);
+}
+
+.case h3, .case h4 {
+  margin-top: 0;
+  color: #a63636;
+}
+
+.case img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1em;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.75em;
+  text-align: center;
+}
+
+th {
+  background-color: #eee;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #a63636;
+  color: white;
+  padding: 0.8em 1.5em;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+.cta-button:hover {
+  background-color: #8b2e2e;
+}
+
+footer {
+  background-color: #204040;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -149,62 +263,156 @@
   </div>
 </section>
 
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rub-X: The Real Lives Behind Rubber</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <h1>The Real Lives Behind Rubber: Why Rub-X Needs UN Custodianship</h1>
+  <p>This is a call for human dignity and technological responsibility.</p>
+</header>
+
+<section id="call-to-action">
+  <h2>“Rubber sustains the world—but it hurts the workers.”</h2>
+  <p>
+    Behind every drop of natural rubber lies the harsh reality of millions of tappers who rise before dawn, carry heavy loads, and endure injury, disease, and chemical exposure.
+    They produce the tires, gloves, and soles the world depends on—yet live on the edge of poverty, often with their children forced to join them in the fields.
+  </p>
+  <p>
+    Rub-X is a breakthrough technology that can change this.
+    We respectfully call on United Nations agencies to host and promote Rub-X,
+    ensuring it is not buried or privatized, but used to bring dignity and safety to workers across the globe.
+  </p>
+</section>
+
+<section id="worker-cases" class="grid">
+  <div class="case">
+    <img src="images/liberia_1976.jpg" alt="Liberian rubber tapper carrying buckets">
+    <h3>Liberia 1976 – Shoulder‑borers</h3>
+    <p>At Firestone plantations, workers carried buckets of latex over long distances—an estimated 60–70 kg per day.</p>
+    <p class="source">Photo: Fred van der Kraaij, 1976 (CC BY‑SA 4.0)</p>
+  </div>
+  <div class="case">
+    <img src="images/asia_tapping.jpg" alt="Southeast Asia rubber tapping scene">
+    <h3>Southeast Asia – Manual Tapping</h3>
+    <p>Workers scrape latex with knives in less‑developed plantations—often exposed to injuries and toxins.</p>
+    <p class="source">Public domain / Science History Org</p>
+  </div>
+  <div class="case">
+    <img src="images/srilanka_modern.jpg" alt="Sri Lankan rubber tapper">
+    <h3>Sri Lanka – Still at Risk</h3>
+    <p>Despite modern aid, many tappers rely on traditional tools in steep terrain under hazardous conditions.</p>
+    <p class="source">Source: Alamy stock / field photo</p>
+  </div>
+</section>
 
 <section id="stats">
-  <h3>令人震惊的数据：</h3>
+  <h3>Shocking Statistics:</h3>
   <ul>
-    <li><strong>49%</strong>：斯里兰卡割胶工人年伤害率</li>
-    <li><strong>63kg+</strong>：利比里亚每日背负橡胶重量</li>
-    <li><strong>$1.59</strong>：未达配额时的实际日工资</li>
-    <li><strong>0%</strong>：多数国家对工人的防护装备供给</li>
-    <li><strong>高致癌风险</strong>：长期暴露于氨、苯、杀真菌剂</li>
+    <li><strong>49%</strong>: Injury rate among tappers in Sri Lanka</li>
+    <li><strong>63kg+</strong>: Daily weight carried in Liberia</li>
+    <li><strong>$1.59</strong>: Real wage when quotas are unmet</li>
+    <li><strong>0%</strong>: Protective equipment coverage in most regions</li>
+    <li><strong>High cancer risk</strong>: Chronic exposure to ammonia, benzene, and fungicides</li>
   </ul>
 </section>
 
 <section id="rubx-solution">
-  <h3>Rub-X 的出现，意味着什么？</h3>
+  <h3>What Rub-X Can Change:</h3>
   <table>
     <thead>
       <tr>
-        <th>问题</th>
-        <th>传统割胶</th>
-        <th>Rub-X 自动割胶系统</th>
+        <th>Issue</th>
+        <th>Traditional Tapping</th>
+        <th>Rub-X Automated System</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>伤害风险</td>
-        <td>高风险（刀具伤、毒液灼伤、夜间工作）</td>
-        <td>自动化操作，完全无需人工割胶</td>
+        <td>Injury Risk</td>
+        <td>High (blades, venom, night shifts)</td>
+        <td>Fully automated – no manual cutting</td>
       </tr>
       <tr>
-        <td>体力负担</td>
-        <td>凌晨上山、重物背负</td>
-        <td>线驱动系统，低能耗、远程部署</td>
+        <td>Physical Burden</td>
+        <td>Heavy loads before sunrise</td>
+        <td>Remote deployment, low-energy wire drive</td>
       </tr>
       <tr>
-        <td>接触毒物</td>
-        <td>化学品处理无保护</td>
-        <td>完全无人工化学接触</td>
+        <td>Chemical Exposure</td>
+        <td>Unprotected handling of substances</td>
+        <td>No human contact with chemicals</td>
       </tr>
       <tr>
-        <td>童工问题</td>
-        <td>配额压力下常雇用儿童</td>
-        <td>根本性消除人力需求</td>
+        <td>Child Labor</td>
+        <td>Common under quota pressure</td>
+        <td>Eliminates human labor needs</td>
       </tr>
     </tbody>
   </table>
 </section>
 
 <section id="un-call">
-  <h3>我们请求联合国托管这项技术</h3>
+  <h3>We Call on the United Nations to Host Rub-X</h3>
   <p>
-    Rub-X 项目目前仍由个人独立研发，资源有限，但技术已完成验证。我们愿将其交由联合国或其指定机构中立托管，避免被私有化或封存失效。
+    The Rub-X project remains independently developed and underfunded.
+    We are ready to transfer stewardship to the United Nations or a designated neutral body
+    to prevent privatization or technological loss.
   </p>
   <p>
-    请支持我们的全球联署，共同推动 Rub-X 技术造福人类，结束这一代人不该再承受的割胶苦役。
+    Support our global petition to ensure Rub-X can serve humanity and end the hardship that generations of rubber workers should no longer bear.
   </p>
-  <a href="https://rub-x.org/petition.html" class="cta-button">加入全球联署</a>
+  <a href="https://rub-x.org/petition.html" class="cta-button">Join the Global Petition</a>
+</section>
+
+<footer>
+  &copy; 2025 Rub-X Project. For dignity, for equity, for the workers who bleed behind the rubber we use.
+</footer>
+</body>
+</html>
+
+
+
+<section id="stats">
+  <h3>Shocking Statistics:</h3>
+  <ul>
+    <li><strong>49%</strong>：Annual injury rate among rubber tappers in Sri Lanka</li>
+    <li><strong>63kg+</strong>：Daily weight of latex carried by workers in Liberia</li>
+    <li><strong>$1.59</strong>：Actual daily wage when quota is not met</li>
+    <li><strong>0%</strong>： Access to protective equipment in most rubber-producing countries
+
+</li>
+    <li><strong>High cancer risk</strong>：Due to long-term exposure to ammonia, benzene, and fungicides</li>
+  </ul>
+</section>
+
+<section id="rubx-solution">
+  <h3>What Does the Arrival of Rub-X Mean?</h3>
+  <table>
+    Rub-X represents a fundamental shift in how natural rubber can be harvested—safely, affordably, and without human suffering.
+It offers an alternative to outdated manual labor practices that have harmed millions for generations.
+With Rub-X, the world has a chance to end this hidden injustice and bring dignity and protection to the workers who sustain global supply chains.
+    </tbody>
+  </table>
+</section>
+
+<section id="un-call">
+  <h3>We Call on the United Nations to Steward This Technology</h3>
+  <p>
+    The Rub-X project has been independently developed by an individual inventor with limited resources, yet the core technology has already been validated.
+We are ready to place it under the custodianship of the United Nations or any designated neutral body—
+to prevent it from being privatized, buried, or lost.
+  </p>
+  <p>
+    Please support our global petition to ensure Rub-X is used for the good of humanity—
+to end the suffering that rubber tappers should no longer endure in this generation.
+  </p>
+  <a href="https://rub-x.org/petition.html" class="cta-button">Join the Global Petition</a>
 </section>
 
 <footer>
